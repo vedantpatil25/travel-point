@@ -444,6 +444,167 @@ h1 em, h2 em {
     margin: 0.5rem;
 }
 
+.service-card__link {
+    display: block;
+    height: 100%;
+}
+
+.button-motion {
+    display: inline-flex;
+}
+
+.button-motion .button {
+    width: 100%;
+}
+
+/* A small scroll-progress train keeps the travel story moving across every route. */
+.scroll-train {
+    bottom: max(12px, env(safe-area-inset-bottom));
+    height: 34px;
+    left: 24px;
+    pointer-events: none;
+    position: fixed;
+    right: 24px;
+    z-index: 20;
+}
+
+.scroll-train__track {
+    background: rgba(255, 247, 237, .46);
+    border: 1px solid rgba(74, 37, 10, .24);
+    border-radius: 999px;
+    bottom: 5px;
+    height: 4px;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    right: 0;
+}
+
+.scroll-train__track::after {
+    background: repeating-linear-gradient(90deg, var(--tp-brown) 0 14px, transparent 14px 23px);
+    content: '';
+    inset: -2px 0;
+    opacity: .28;
+    position: absolute;
+}
+
+.scroll-train__track > span {
+    background: linear-gradient(90deg, var(--tp-gold), var(--tp-sunset));
+    border-radius: inherit;
+    display: block;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.scroll-train__vehicle {
+    bottom: 4px;
+    display: flex;
+    height: 25px;
+    position: absolute;
+    scale: 1.28;
+    transform-origin: left bottom;
+    width: 58px;
+}
+
+.scroll-train__engine, .scroll-train__car {
+    background: var(--tp-brown);
+    border: 2px solid var(--tp-gold);
+    height: 17px;
+    position: absolute;
+}
+
+.scroll-train__engine {
+    border-radius: 4px 8px 2px 2px;
+    bottom: 4px;
+    left: 0;
+    width: 25px;
+}
+
+.scroll-train__car {
+    align-items: center;
+    border-radius: 2px 4px 4px 2px;
+    bottom: 4px;
+    display: flex;
+    gap: 3px;
+    left: 27px;
+    padding: 2px;
+    width: 27px;
+}
+
+.scroll-train__car span, .scroll-train__window {
+    background: var(--tp-cream);
+    border-radius: 1px;
+    display: block;
+    height: 6px;
+    width: 6px;
+}
+
+.scroll-train__chimney {
+    background: var(--tp-gold);
+    border-radius: 2px 2px 0 0;
+    height: 7px;
+    left: 6px;
+    position: absolute;
+    top: -8px;
+    width: 7px;
+}
+
+.scroll-train__headlight {
+    background: var(--tp-gold);
+    border-radius: 50%;
+    height: 4px;
+    position: absolute;
+    right: -4px;
+    top: 5px;
+    width: 4px;
+}
+
+.scroll-train__wheel {
+    background: var(--tp-black);
+    border: 2px solid var(--tp-gold);
+    border-radius: 50%;
+    bottom: 0;
+    height: 9px;
+    position: absolute;
+    width: 9px;
+}
+
+.scroll-train__wheel--one { left: 5px; }
+.scroll-train__wheel--two { left: 20px; }
+.scroll-train__wheel--three { left: 42px; }
+
+.scroll-train__smoke {
+    background: rgba(255, 247, 237, .8);
+    border-radius: 50%;
+    height: 5px;
+    position: absolute;
+    width: 5px;
+}
+
+.scroll-train__smoke--one { left: 7px; top: -13px; }
+.scroll-train__smoke--two { left: 14px; top: -18px; transform: scale(.7); }
+
+.scroll-train__destination {
+    background: var(--tp-brown);
+    border: 1px solid rgba(255, 180, 49, .6);
+    border-radius: 999px;
+    bottom: 34px;
+    color: var(--tp-gold);
+    font-size: .56rem;
+    font-weight: 700;
+    letter-spacing: .12em;
+    padding: .35rem .55rem;
+    position: absolute;
+    right: 0;
+    text-transform: uppercase;
+}
+
+.destination-card > a {
+    display: block;
+    height: 100%;
+}
+
 .service-card:hover {
     background: #fff;
     box-shadow: var(--tp-shadow);
@@ -1590,6 +1751,25 @@ h1 em, h2 em {
         transition-duration: .01ms !important;
         animation-duration: .01ms !important;
         animation-iteration-count: 1 !important;
+    }
+}
+
+@media (max-width: 700px) {
+    .scroll-train {
+        bottom: max(9px, env(safe-area-inset-bottom));
+        height: 30px;
+        left: 12px;
+        right: 12px;
+    }
+
+    .scroll-train__vehicle {
+        transform-origin: left bottom;
+        scale: 1.04;
+    }
+
+    .scroll-train__destination {
+        bottom: 30px;
+        font-size: .5rem;
     }
 }
 
