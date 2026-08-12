@@ -182,4 +182,14 @@ body { overflow-x:hidden; }
 .hero-detail-card__meta { border-top:1px solid rgba(255,247,237,.22); display:flex; flex-wrap:wrap; gap:.45rem 1rem; margin-top:1.1rem; padding-top:.8rem; }
 .hero-detail-card__meta span { color:rgba(255,247,237,.7); font-size:.62rem; }
 @media (max-width:900px) { .home-flight-path { opacity:.7; right:2%; transform:translateY(-50%) scale(.78); transform-origin:right center; } .hero-detail-card { right:5%; width:250px; } }
-@media (max-width:700px) { .home-flight-path { opacity:.62; right:2%; transform:translateY(-50%) scale(.6); transform-origin:right center; } .hero-detail-card { bottom:5%; left:max(6vw,24px); max-width:none; right:auto; width:calc(100% - max(12vw,48px)); } }
+@media (max-width:700px) {
+  .hero { min-height:900px; }
+  .hero-content { padding:9.5rem max(6vw,24px) 13rem; }
+  .hero-content > .eyebrow { margin-top:1.2rem; }
+  .hero h1 { margin-bottom:1.5rem; }
+  .hero-intro { max-width:330px; }
+  .hero-actions { position:relative; z-index:4; }
+  .home-flight-path { height:230px; opacity:.34; right:-18px; top:51%; transform:translateY(-50%) scale(.62); transform-origin:right center; z-index:0; }
+  .home-flight-path__plane { height:22px; width:22px; }
+  .hero-detail-card { bottom:1.5rem; left:max(6vw,24px); max-width:none; right:auto; width:calc(100% - max(12vw,48px)); z-index:3; }
+}
