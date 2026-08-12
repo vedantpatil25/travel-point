@@ -183,13 +183,27 @@ body { overflow-x:hidden; }
 .hero-detail-card__meta span { color:rgba(255,247,237,.7); font-size:.62rem; }
 @media (max-width:900px) { .home-flight-path { opacity:.7; right:2%; transform:translateY(-50%) scale(.78); transform-origin:right center; } .hero-detail-card { right:5%; width:250px; } }
 @media (max-width:700px) {
-  .hero { min-height:900px; }
-  .hero-content { padding:9.5rem max(6vw,24px) 13rem; }
-  .hero-content > .eyebrow { margin-top:1.2rem; }
-  .hero h1 { margin-bottom:1.5rem; }
+  .hero { min-height:100svh; }
+  .hero-content {
+    display:flex;
+    flex-direction:column;
+    justify-content:flex-start;
+    min-height:100svh;
+    padding:7.25rem max(6vw,24px) 8.5rem;
+  }
+  .hero-content > .eyebrow { margin-top:1rem; }
+  .hero h1 { margin-bottom:1.1rem; }
   .hero-intro { max-width:330px; }
-  .hero-actions { position:relative; z-index:4; }
-  .home-flight-path { height:230px; opacity:.34; right:-18px; top:51%; transform:translateY(-50%) scale(.62); transform-origin:right center; z-index:0; }
-  .home-flight-path__plane { height:22px; width:22px; }
-  .hero-detail-card { bottom:1.5rem; left:max(6vw,24px); max-width:none; right:auto; width:calc(100% - max(12vw,48px)); z-index:3; }
+  .hero-actions { position:relative; z-index:4; margin-top:1.6rem; }
+  .hero-note { display:none; }
+  .home-flight-path { height:200px; opacity:.3; right:-22px; top:52%; transform:translateY(-50%) scale(.58); transform-origin:right center; z-index:0; }
+  .home-flight-path__plane { height:20px; width:20px; }
+  .hero-detail-card {
+    bottom:1rem;
+    left:max(6vw,24px);
+    max-width:none;
+    right:auto;
+    width:calc(100% - max(12vw,48px));
+    z-index:3;
+  }
 }
