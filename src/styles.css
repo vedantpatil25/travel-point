@@ -188,8 +188,11 @@ body { overflow-x:hidden; }
     display:flex;
     flex-direction:column;
     justify-content:flex-start;
+    left:0;
     min-height:100svh;
+    max-width:none;
     padding:6rem max(6vw,24px) 6rem;
+    width:100%;
   }
   .hero-content > .eyebrow { margin-top:1rem; }
   .hero h1 { font-size:clamp(3.25rem,14vw,4.8rem); margin-bottom:.9rem; }
