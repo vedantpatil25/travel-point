@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
+import { AnimatePresence } from 'framer-motion';
+import { motion } from '../common/Motion';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import ScrollToTop from './ScrollToTop';
@@ -28,5 +30,10 @@ function RouteMetadata() {
 }
 
 export default function MainLayout({ children }) {
-  return <><RouteMetadata /><ScrollToTop /><Navbar /><main>{children}</main><Footer /></>;
+  const { pathname } = useLocation();
+  return <><RouteMetadata /><ScrollToTop /><Navbar />
+    <AnimatePresence mode="wait" initial={false}>
+      <motion.main key={pathname} className="route-shell" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .32, ease: 'easeOut' }}>{children}</motion.main>
+    </AnimatePresence>
+    <Footer /></>;
 }
