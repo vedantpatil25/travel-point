@@ -6,7 +6,18 @@ import { Reveal, motion } from '../common/Motion';
 
 export default function Hero() {
     return <section className="hero">
-        <div className="hero-image"/>
+        <video
+            className="hero-image"
+            autoPlay
+            muted
+            loop
+            playsInline
+            preload="metadata"
+            poster="/assets/branding/home__background.png"
+            aria-hidden="true"
+        >
+            <source src="/assets/branding/hero__background.mp4" type="video/mp4" />
+        </video>
         <div className="hero-overlay"/>
         <motion.div className="hero-content" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: .8 }}><motion.div className="hero-brand-lockup" initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: .12, duration: .7 }}><strong>TRAVEL POINT</strong><span>EXPLORE. EXPERIENCE. ENJOY.</span></motion.div><p className="eyebrow">TRAVEL & TOURISM · ESTABLISHED 2018</p><h1>Go
             where<br/><em>you feel alive.</em></h1><p className="hero-intro">Thoughtful journeys, shaped around you —

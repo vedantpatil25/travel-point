@@ -267,12 +267,13 @@ h1 em, h2 em {
 }
 
 .hero-image {
-    background-image: url('/assets/branding/home__background.png');
-    background-position: center;
-    background-size: cover;
     inset: 0;
     opacity: .9;
+    object-fit: cover;
+    object-position: center;
     position: absolute;
+    height: 100%;
+    width: 100%;
 }
 
 .hero-overlay {
