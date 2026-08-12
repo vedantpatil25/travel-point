@@ -32,6 +32,7 @@ export default function ScrollTrain() {
   return <div className="scroll-train" aria-hidden="true">
     <div className="scroll-train__track" ref={trackRef}><motion.span style={{ width: progressWidth }} /></div>
     <motion.div className="scroll-train__vehicle" style={{ x: trainX }}>
+      <div className="scroll-train__vehicle-art">
       <span className="scroll-train__smoke scroll-train__smoke--one" />
       <span className="scroll-train__smoke scroll-train__smoke--two" />
       <div className="scroll-train__engine">
@@ -43,6 +44,7 @@ export default function ScrollTrain() {
       <i className="scroll-train__wheel scroll-train__wheel--one" />
       <i className="scroll-train__wheel scroll-train__wheel--two" />
       <i className="scroll-train__wheel scroll-train__wheel--three" />
+      </div>
     </motion.div>
     {!reduceMotion && <motion.span className="scroll-train__destination" style={{ opacity: labelOpacity }}>Journey in motion</motion.span>}
   </div>;
