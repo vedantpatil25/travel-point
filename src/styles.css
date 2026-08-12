@@ -1948,7 +1948,7 @@ h1 em, h2 em {
     box-shadow: 0 0 18px rgba(255, 180, 49, .14);
     inset: 65px;
     transform: rotateX(72deg) rotateZ(0deg);
-    animation: travel-ring-inner 9s linear infinite reverse;
+    animation: travel-ring-inner 9s linear infinite;
 }
 
 .travel-orbit__plane--one {
@@ -1993,19 +1993,19 @@ body {
 
 @keyframes travel-ring-b {
     from {
-        transform: rotateY(68deg) rotateZ(360deg);
+        transform: rotateY(68deg) rotateZ(0deg);
     }
     to {
-        transform: rotateY(68deg) rotateZ(0deg);
+        transform: rotateY(68deg) rotateZ(360deg);
     }
 }
 
 @keyframes travel-plane-a {
     from {
-        transform: rotate(0deg) translateX(174px) rotate(-90deg);
+        transform: rotate(360deg) translateX(174px) rotate(-90deg);
     }
     to {
-        transform: rotate(360deg) translateX(174px) rotate(-90deg);
+        transform: rotate(0deg) translateX(174px) rotate(-90deg);
     }
 }
 
