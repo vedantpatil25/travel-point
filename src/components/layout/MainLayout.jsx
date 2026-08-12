@@ -5,6 +5,7 @@ import { motion } from '../common/Motion';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import ScrollToTop from './ScrollToTop';
+import ScrollTrain from '../common/ScrollTrain';
 
 const metadata = {
   '/': ['TRAVEL POINT — Your Trusted Travel Partner', 'Thoughtful travel experiences across India and international destinations.'],
@@ -35,5 +36,5 @@ export default function MainLayout({ children }) {
     <AnimatePresence mode="wait" initial={false}>
       <motion.main key={pathname} className="route-shell" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }} transition={{ duration: .32, ease: 'easeOut' }}>{children}</motion.main>
     </AnimatePresence>
-    <Footer /></>;
+    <Footer /><ScrollTrain /></>;
 }
