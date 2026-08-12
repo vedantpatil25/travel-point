@@ -18,7 +18,7 @@ export default function ContactForm() {
     };
     return <section className="contact-section section">
         <div className="contact-intro"><SectionTitle kicker="Start a conversation"
-                                                     title={<>Let’s plan<br/><em>something good.</em></>}
+                                                     title={<>Let’s plan<br/><em>something good together.</em></>}
                                                      copy="Have a destination in mind, or just a feeling? We’d love to hear from you."/>
             <div className="contact-details"><a
                 href={`tel:${contact.phone.replaceAll(' ', '')}`}><Phone/>{contact.phone}</a><a
