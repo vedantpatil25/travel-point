@@ -1319,6 +1319,19 @@ h1 em, h2 em {
     margin: -.4rem 0 1rem;
 }
 
+.inquiry-form .validation-error {
+    color: #9b2b14;
+    display: block;
+    font-size: .7rem;
+    font-weight: 500;
+    margin-top: .45rem;
+}
+
+.inquiry-form button:disabled {
+    cursor: wait;
+    opacity: .65;
+}
+
 .form-success {
     padding: 4rem 1rem;
     text-align: center;
